@@ -26,6 +26,7 @@ namespace TestInvoice.Controllers
         // GET: Customer/Create
         public ActionResult Nuevo()
         {
+            model._customerTypes = model.ObtenerListaCustomerTypes();
             return View(model);
         }
 
@@ -40,6 +41,7 @@ namespace TestInvoice.Controllers
         // GET: Customer/Edit/5
         public ActionResult Editar(int id)
         {
+            model._customerTypes = model.ObtenerListaCustomerTypes();
             return View(model.ObtenerCustomer(id));
         }
 

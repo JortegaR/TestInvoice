@@ -83,5 +83,10 @@ namespace TestInvoice.Models
             else return "No se puede borrar el cliente por que tiene facturas enlazadas";
             
         }
+
+        public IEnumerable<CustomerTypes> ObtenerListaCustomerTypes()
+        {
+            return _entities.CustomerTypes.ToList();
+        }
     }
 }

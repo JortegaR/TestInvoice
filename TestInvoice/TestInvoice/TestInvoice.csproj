@@ -597,6 +597,8 @@
     <Content Include="Views\CustomerTypes\Borrar.cshtml" />
     <Content Include="Views\CustomerTypes\Detalle.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Nuevo.cshtml" />
+    <Content Include="Views\Customer\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

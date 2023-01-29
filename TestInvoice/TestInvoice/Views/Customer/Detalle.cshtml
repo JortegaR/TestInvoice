@@ -1,6 +1,6 @@
 ﻿@model TestInvoice.Models.CustomerViewModel
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Ver";
 }
 
 
@@ -9,8 +9,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <form method="post" action="@Url.Action("Editar","Customer")">
-            @Html.HiddenFor(x => x._customerId)
+        <form>
             <div class="col-lg-12">
                 <!-- DataTableArea -->
                 <div class="content-box">
@@ -20,15 +19,15 @@
                     <div class="content">
                         <div class="form-group">
                             <label class="control-label info-color">Nombre</label>
-                            <input type="text" name="_custName" value="@Model._custName" class="form-control input-info">
+                            <input type="text" name="_custName" value="@Model._custName" class="form-control input-info" disabled>
                         </div>
                         <div class="form-group">
                             <label class="control-label info-color">Direccion</label>
-                            <textarea type="text" name="_adress" class="form-control input-info">@Model._adress</textarea>
+                            <textarea type="text" name="_adress" class="form-control input-info" disabled>@Model._adress</textarea>
                         </div>
                         <div class="form-group">
                             <label class="control-label info-color">Estado</label>
-                            <select type="text" name="_status" class="form-control input-info" id="_estatus">
+                            <select type="text" name="_status" class="form-control input-info" id="_estatus" disabled>
                                 @if (Model._status)
                                 {
                                     <option value="true" selected>Activo</option>
@@ -43,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label info-color">Tipo Cliente</label>
-                            <select type="text" name="_customerTypeId" class="form-control input-info" id="_customerTypeId">
+                            <select type="text" name="_customerTypeId" class="form-control input-info" id="_customerTypeId" disabled>
                                 @foreach (var item in Model._customerTypes.ToList())
                                 {
                                     if (item.Id == Model._customerTypeId)
@@ -58,8 +57,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success">Editar</button>
-                            <a href="@Url.Action("Index","Customer")" class="btn btn-danger" style="color:white">Cancelar</a>
+                            <a href="@Url.Action("Index","Customer")" class="btn btn-info" style="color:white">Ver</a>
                         </div>
 
                     </div>

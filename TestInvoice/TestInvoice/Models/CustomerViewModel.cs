@@ -57,6 +57,7 @@ namespace TestInvoice.Models
                 _customerTypeId = data.CustomerTypeId,
                 _customerTypeDescripcion = data.CustomerTypes.Description
             }).FirstOrDefault();
+            model._customerTypes = ObtenerListaCustomerTypes();
             return model;
         }
 

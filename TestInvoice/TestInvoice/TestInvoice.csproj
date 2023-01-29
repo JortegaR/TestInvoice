@@ -163,6 +163,7 @@
     </Compile>
     <Compile Include="Models\CustomerTypeViewModel.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\InvoiceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -599,6 +600,8 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Nuevo.cshtml" />
     <Content Include="Views\Customer\Editar.cshtml" />
+    <Content Include="Views\Customer\Detalle.cshtml" />
+    <Content Include="Views\Customer\Borrar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -41,7 +41,6 @@ namespace TestInvoice.Controllers
         // GET: Customer/Edit/5
         public ActionResult Editar(int id)
         {
-            model._customerTypes = model.ObtenerListaCustomerTypes();
             return View(model.ObtenerCustomer(id));
         }
 

@@ -65,6 +65,7 @@ namespace TestInvoice.Controllers
             else
             {
                 model = model.ObtenerCustomerTypes(customerType._customerTypeId);
+                model._message = "No se puede borrar el tipo cliente por que tiene cliente enlazados";
                 return View(model);
             }
         }
